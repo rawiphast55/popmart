@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popmart Automation</title>
+</head>
+<body>
+    <h1>Popmart Automation</h1>
+    <button id="start">เริ่มทำงาน</button>
+    <script>
+        document.getElementById('start').addEventListener('click', function() {
+            window.location.href = 'https://popmartth.rocket-booking.app/booking';
+            setTimeout(function() {
+                var firstButton = document.querySelector("body > div > div.sc-715cd296-0.ipiVos > div > div:nth-child(2) > a");
+                if (firstButton) {
+                    firstButton.click();
+                    setTimeout(function() {
+                        var secondButton = document.querySelector("body > div > div.sc-98fa634e-0.fIUykr > div.ant-flex.css-kghr11.ant-flex-align-center.ant-flex-justify-center.ant-flex-vertical > button");
+                        if (secondButton) {
+                            secondButton.click();
+                        } else {
+                            alert('ไม่พบปุ่มที่สอง');
+                        }
+                    }, 3000);
+                } else {
+                    alert('ไม่พบปุ่มแรก');
+                }
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
