@@ -11,6 +11,9 @@
     <script>
         document.getElementById('start').addEventListener('click', function() {
             window.location.href = 'https://popmartth.rocket-booking.app/booking';
+        });
+
+        window.onload = function() {
             setTimeout(function() {
                 console.log('กำลังค้นหาปุ่มแรก...');
                 var firstButton = document.querySelector("body > div > div.sc-715cd296-0.ipiVos > div > div:nth-child(2) > a");
@@ -31,7 +34,7 @@
                     console.log('ไม่พบปุ่มแรก');
                 }
             }, 5000);
-        });
+        };
     </script>
 </body>
 </html>
