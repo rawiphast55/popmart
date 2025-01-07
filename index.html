@@ -12,19 +12,23 @@
         document.getElementById('start').addEventListener('click', function() {
             window.location.href = 'https://popmartth.rocket-booking.app/booking';
             setTimeout(function() {
+                console.log('กำลังค้นหาปุ่มแรก...');
                 var firstButton = document.querySelector("body > div > div.sc-715cd296-0.ipiVos > div > div:nth-child(2) > a");
                 if (firstButton) {
+                    console.log('พบปุ่มแรกแล้ว คลิกเลย!');
                     firstButton.click();
                     setTimeout(function() {
+                        console.log('กำลังค้นหาปุ่มที่สอง...');
                         var secondButton = document.querySelector("body > div > div.sc-98fa634e-0.fIUykr > div.ant-flex.css-kghr11.ant-flex-align-center.ant-flex-justify-center.ant-flex-vertical > button");
                         if (secondButton) {
+                            console.log('พบปุ่มที่สองแล้ว คลิกเลย!');
                             secondButton.click();
                         } else {
-                            alert('ไม่พบปุ่มที่สอง');
+                            console.log('ไม่พบปุ่มที่สอง');
                         }
                     }, 3000);
                 } else {
-                    alert('ไม่พบปุ่มแรก');
+                    console.log('ไม่พบปุ่มแรก');
                 }
             }, 5000);
         });
